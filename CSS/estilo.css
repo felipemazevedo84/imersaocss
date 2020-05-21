@@ -1,0 +1,164 @@
+/* soft reset do css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+  background-image: url('background-image.jpg');
+  background-size: auto 100vh;
+  font-family: Brandon Grotesque;
+  height: 100vh;
+}
+  
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}  
+/* breakpoint */
+@media (min-width: 600px) {
+    body {
+      font-size: 18px;
+    }
+}
+  
+/* breakpoint */
+@media (min-width: 1200px) {
+    body {
+      font-size: 20px;
+    }
+}
+  
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.menu {
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0px;
+    z-index: 1;
+}
+    
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+    
+.menu li {
+    list-style: none;
+}
+  
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.5s, color 0.5s;
+}
+  
+.menu a:active,
+.menu a:hover {
+    background-color: rgb(54, 189, 222);
+    color: white;
+}
+  
+a {
+    color: #2b4960;
+    text-decoration: none;
+}
+    
+a:hover {
+    text-decoration: underline;
+}
+  
+.titulo {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    animation: 1s ease 2s animacaoTitulo forwards;
+}
+  
+@keyframes animacaoTitulo {
+    from  {
+      transform: scale(0.2) translateY(50vh);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+}
+  
+.site-title,
+.site-subtitle {
+    color: #2b4960;
+    text-align: center;
+}
+  
+.site-title {
+    font-size: 4em;
+    font-family: 'Balsamiq Sans', cursive;
+}
+  
+.site-subtitle {
+    font-style: italic;
+    font-family: 'Nanum Brush Script', cursive;
+    line-height: 1.8em;
+}
+  
+.contato,
+.portfolio {
+    padding: 2em;
+    height: 100vh;
+}
+  
+/* se a tela  tiver pelo menos 560px vai carregar estes estilos */
+@media (min-width: 1200px) {
+    .container. grid {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1200px;
+    }
+}
+  
+.contato h2,
+.portfolio h2 {
+    color: #2b4960;
+    font-family: 'Playfair Display', cursive;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+}
+  
+.img-logomarca {
+    height: 180px;
+    width: 180px;
+}
+  
+.img-perfil {
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    object-position: left bottom;
+    border-radius: 50%;
+}
+  
+.contato .icon {
+    text-align: center;
+}
+  
+.contato a {
+    color: #2b4960;
+    font-size: 4em;
+    transition: text-shadow 1s;
+}
+  
+.contato a:active,
+.contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
